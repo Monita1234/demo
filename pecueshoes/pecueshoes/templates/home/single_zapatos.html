@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Zapatos
+{% endblock %}
+
+{% block content %}
+	{% if zapatos.imagen %}
+		<img src="/media/{{ zapatos.imagen }}" width = "200px" heigth = "200px">
+	{% endif %}
+	<h3>Marca: </h3>{{ zapatos.marca }}
+	<h3>Modelo: </h3>{{ zapatos.modelo }}
+	<h3>Color:</h3>
+	{% for i in zapatos.color.all %}
+		<p>{{ i }}</p>
+	{% endfor %}
+	
+	<h3>Material:</h3>
+	{% for m in zapatos.material.all %}
+		<p>{{ m }}</p>
+	{% endfor %}
+	
+	<h3>Talla: </h3>
+	{% for t in zapatos.talla.all %}
+		<p>{{ t }}</p>
+	{% endfor %}
+
+	<h3>Precio:</h3>{{ zapatos.precio }}
+	
+	<h3>Importado: </h3>
+	{% if zapatos.importado %}
+		<p>Si</p>
+	{% else %}
+		<p>No</p>
+	{% endif %}
+{% endblock %}

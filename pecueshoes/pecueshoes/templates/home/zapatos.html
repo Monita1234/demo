@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Lista de Zapatos
+{% endblock %}
+
+{% block content %}
+	<menu><center><h1>Lista de Zapatos</h1></center></menu>
+	<br>
+	{% if user.is_authenticated %}
+		<a href="{% url 'vista_agregar_zapatos' %}">Agregar Zapatos</a>
+	{% endif %}
+	<br>
+	{% if zapatos %}
+		{% for z in zapatos %}
+			<p><a href="/zapatos/{{ z.id }}">{{ z.marca }}</a>
+
+			{% if user.is_authenticated %}
+				<a href="/edit/zapatos/{{ z.id }}">  editar zapato </a>
+			{% endif %}
+			</p>
+		{% endfor %}
+	{% else %}
+		<h2>No existen zapatos activos a la venta :( </h2> 
+	{% endif %}
+{% endblock %}
