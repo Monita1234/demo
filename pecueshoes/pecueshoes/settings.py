@@ -126,7 +126,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'pecueshoes.apps.zapatos',#aplicacion de ventas
-    'rest_framework',
+    #'rest_framework',
     'gunicorn',
 )
 
