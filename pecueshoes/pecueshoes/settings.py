@@ -126,8 +126,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'pecueshoes.apps.zapatos',#aplicacion de ventas
-    'rest_framework',
-    'gunicorn',
+    #'rest_framework',
+    #'gunicorn',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
