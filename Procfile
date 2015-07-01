@@ -1,1 +1,0 @@
-web: gunicorn pecueshoes.wsgi -b 0.0.0.0:$PORT
