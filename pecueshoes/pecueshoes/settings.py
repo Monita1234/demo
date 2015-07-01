@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'pecueshoes.apps.zapatos',#aplicacion de ventas
     #'rest_framework',
-    #'gunicorn',
+    'gunicorn',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
