@@ -1,9 +1,0 @@
-{
-  "name":"otrorepo",
-  "description":"",
-  "scripts":{},
-  "env":{},
-  "addons":[
-    "heroku-postgresql"
-  ]
-}
